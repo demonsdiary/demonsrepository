@@ -4,9 +4,6 @@ $(call inherit-product, device/motorola/umts_spyder/full_umts_spyder.mk)
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/gsm.mk)
-
 #
 # Setup device specific product configuration.
 #
@@ -17,10 +14,6 @@ PRODUCT_MODEL := XT910
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := MOTOROLA RAZR
 PRODUCT_SFX := umts
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 960
-TARGET_SCREEN_WIDTH := 540
 
 UTC_DATE := $(shell date +%s)
 DATE := $(shell date +%Y%m%d)

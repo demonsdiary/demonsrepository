@@ -35,16 +35,16 @@ PRODUCT_PACKAGES += \
     Stk
 
 # Kexec files
+PRODUCT_PACKAGES += etc/kexec/ramdisk.img
 PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/init.target.rc:root/init.target.rc \
     $(DEVICE_FOLDER)/kexec/devtree:system/etc/kexec/devtree \
-    $(OUT)/ramdisk.img:system/etc/kexec/ramdisk.img \
     $(OUT)/kernel:system/etc/kexec/kernel
 
 # Prebuilts
 PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/media_profiles.xml:system/etc/media_profiles.xml \
-    $(DEVICE_FOLDER)/vold.fstab:system/etc/vold.fstab
+    $(DEVICE_FOLDER)/prebuilt/usr/keylayout/cy8c201xx.kl:system/usr/keylayout/cy8c201xx.kl
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 $(call inherit-product, vendor/motorola/umts_spyder/umts_spyder-vendor.mk)
